@@ -41,6 +41,8 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.required = $scope.required
             formObject.options = $scope.options
             formObject.validation = $scope.validation
+            formObject.effectiveDateEnabled = $scope.effectiveDateEnabled
+
         , yes
 
         $scope.$watch 'optionsText', (text) ->
@@ -63,6 +65,7 @@ angular.module 'builder.controller', ['builder.provider']
                 required: $scope.required
                 optionsText: $scope.optionsText
                 validation: $scope.validation
+                effectiveDateEnabled: $scope.effectiveDateEnabled
         rollback: ->
             ###
             Rollback input value.
@@ -74,6 +77,7 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.required = @model.required
             $scope.optionsText = @model.optionsText
             $scope.validation = @model.validation
+            $scope.effectiveDateEnabled = @model.effectiveDateEnabled
 ]
 
 
